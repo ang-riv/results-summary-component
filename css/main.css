@@ -38,12 +38,24 @@ h2 {
   color: var(--white);
 }
 
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
 /** Summary Card Section Styles**/
 .summary-card {
   margin: 0;
   padding: 0;
   display: flex;
   flex-flow: column nowrap;
+  /*
+  max-width: 500px;
+  max-height: 900px;
+  */
 }
 
 /** Result Section Styles**/
@@ -216,4 +228,60 @@ button {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/** Media Queries **/
+@media all and (min-width: 767px) {
+  /** Summary Card Styles**/
+  .summary-card {
+    display: flex;
+    flex-flow: row nowrap;
+    min-width: 600px;
+    border-radius: 0 5% 5% 0;
+    box-shadow: 10px 10px 21px 0px var(--pale-blue);
+  }
+
+  /** Result Section Styles**/
+  .result {
+    max-width: 325px;
+    border-radius: 5% 5% 5% 5%;
+    justify-content: space-around;
+  }
+
+  .result h2 {
+    font-size: 2.125em;
+  }
+
+  .title {
+    font-size: 1.125em;
+  }
+
+  .number-result {
+    width: 150px;
+    height: 150px;
+  }
+
+  .number-result h1 {
+    font-size: 4em;
+  }
+
+  .description {
+    margin-top: 0;
+  }
+
+  /** Summary Breakdown Styles **/
+  .summary-breakdown {
+    padding: 10px 20px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .content-wrapper {
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
 }
