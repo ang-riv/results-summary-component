@@ -23,7 +23,7 @@
   --dark-gray-blue: hsl(224, 30%, 27%);
 }
 
-/** Global Styles**/
+/** General Styles**/
 html {
   box-sizing: border-box;
 }
@@ -33,9 +33,6 @@ body {
   margin: 0;
 }
 
-strong {
-  color: var(--dark-gray-blue);
-}
 .result h1,
 h2 {
   color: var(--white);
@@ -65,10 +62,6 @@ h2 {
   align-items: center;
 }
 
-.result h1 {
-  font-size: 3.125em;
-}
-
 .result h2 {
   margin-bottom: 0;
 }
@@ -94,16 +87,20 @@ h2 {
   flex-flow: column nowrap;
   align-items: center;
 }
+
 .number-result h1 {
   margin: 0;
   font-weight: 900;
+  font-size: 3.125em;
 }
+
 .number-result p {
   margin: 0;
   font-weight: bold;
   opacity: 0.33;
   color: var(--light-lavender);
 }
+
 .description {
   text-align: center;
   width: 70%;
@@ -120,9 +117,11 @@ h2 {
 .content-wrapper {
   width: 85%;
 }
-h3 {
+
+.summary-breakdown h3 {
   color: var(--dark-gray-blue);
 }
+
 .criteria-item {
   border-radius: 8px;
   display: flex;
@@ -135,6 +134,7 @@ h3 {
 .criteria-item p {
   margin-top: 10px;
 }
+
 .item-title {
   display: flex;
 }
@@ -207,11 +207,13 @@ button {
   color: var(--white);
   background-color: var(--dark-gray-blue);
 }
+
 /** Attribution Styles **/
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
